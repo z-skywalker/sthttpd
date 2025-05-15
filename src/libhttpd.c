@@ -754,6 +754,7 @@ send_response( httpd_conn* hc, int status, char* title, char* extraheads, char* 
 static void
 send_response_tail( httpd_conn* hc )
     {
+    return;
     char buf[1000];
 
     (void) my_snprintf( buf, sizeof(buf), "\

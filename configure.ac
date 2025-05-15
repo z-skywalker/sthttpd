@@ -1,5 +1,5 @@
-AC_PREREQ([2.68])
-AC_INIT([sthttpd], [2.27.0], [http://opensource.dyc.edu/bugzilla3])
+AC_PREREQ([2.71])
+AC_INIT([sthttpd],[2.27.0],[http://opensource.dyc.edu/bugzilla3])
 AC_CONFIG_SRCDIR([src/thttpd.c])
 AC_CONFIG_HEADERS([config.h])
 AM_INIT_AUTOMAKE([1.11 foreign])
@@ -19,7 +19,7 @@ AC_CHECK_LIB(resolv, hstrerror)
 
 # Checks for header files.
 AC_CHECK_HEADERS([arpa/inet.h fcntl.h grp.h memory.h netdb.h netinet/in.h osreldate.h paths.h poll.h stdlib.h string.h sys/devpoll.h sys/event.h sys/param.h sys/poll.h sys/socket.h sys/time.h syslog.h unistd.h])
-AC_HEADER_TIME
+
 AC_HEADER_DIRENT
 AC_PROG_RANLIB
 
@@ -37,8 +37,7 @@ AC_FUNC_FORK
 AC_FUNC_LSTAT_FOLLOWS_SLASHED_SYMLINK
 AC_FUNC_MALLOC
 AC_FUNC_MMAP
-AC_FUNC_WAIT3
-AC_CHECK_FUNCS([alarm atoll bzero clock_gettime daemon dup2 gai_strerror getcwd getaddrinfo gethostbyname gethostname getnameinfo getpass gettimeofday hstrerror inet_ntoa kqueue memmove memset mkdir munmap poll select setlogin setsid sigset socket strcasecmp strchr strcspn strdup strerror strncasecmp strpbrk strrchr strspn strstr tzset vsnprintf waitpid])
+AC_CHECK_FUNCS([alarm atoll bzero clock_gettime daemon dup2 gai_strerror getcwd getaddrinfo gethostbyname gethostname getnameinfo getpass gettimeofday hstrerror inet_ntoa kqueue memmove memset mkdir munmap poll select setlogin setsid socket strcasecmp strchr strcspn strdup strerror strncasecmp strpbrk strrchr strspn strstr tzset vsnprintf waitpid])
 
 AC_ARG_VAR(WEBDIR, [The document root directory of your web page])
 
